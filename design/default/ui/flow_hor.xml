@@ -1,0 +1,36 @@
+<window theme="main" >
+  <view name="view" x="c" y="0" w="100%" h="40%" children_layout="default(r=3,c=1,s=10,m=10)">
+    <liquid_flow name="flow1" vertical="false" forward="false" running="true" style="hor" 
+      image="flow_hor" head_image="left" tail_image="right"/>
+    <liquid_flow name="flow2" vertical="false" forward="true" running="true" style="hor" 
+      image="flow_hor" head_image="right" tail_image="left"/>
+    <liquid_flow name="flow3" vertical="false" forward="true" running="true" style="hor" 
+      image="flow_hor" head_image="right" tail_image="left"
+      update_delta="5"
+      />
+    <liquid_flow name="flow4" vertical="false" forward="true" running="true" style="hor" 
+      image="flow_hor" head_image="right" tail_image="left"
+      update_delta="20" update_interval="20"
+      />
+  </view>
+
+  <button x="10" y="b:150" w="80" h="30" text="start">
+    <property name="on:click">
+      widget_set('window', 'view.flow1.running', true);
+      widget_set('window', 'view.flow2.running', true);
+      widget_set('window', 'view.flow3.running', true);
+      widget_set('window', 'view.flow4.running', true);
+    </property>
+  </button>
+
+  <button x="10" y="b:100" w="80" h="30" text="stop">
+    <property name="on:click">
+      widget_set('window', 'view.flow1.running', false);
+      widget_set('window', 'view.flow2.running', false);
+      widget_set('window', 'view.flow3.running', false);
+      widget_set('window', 'view.flow4.running', false);
+    </property>
+  </button>
+
+  <button x="10" y="b:50" w="80" h="30" text="close" on:click="back()"/>
+</window>

@@ -1,0 +1,15 @@
+LIBRARY   liquid_flow
+EXPORTS
+    liquid_flow_register
+    liquid_flow_supported_render_mode
+    liquid_flow_create
+    liquid_flow_cast
+    liquid_flow_set_running
+    liquid_flow_set_forward
+    liquid_flow_set_vertical
+    liquid_flow_set_image
+    liquid_flow_set_head_image
+    liquid_flow_set_tail_image
+    liquid_flow_set_update_delta
+    liquid_flow_set_update_interval
+    liquid_flow_get_widget_vtable

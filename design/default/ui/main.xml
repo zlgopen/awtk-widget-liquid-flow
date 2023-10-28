@@ -1,0 +1,5 @@
+<window theme="main" >
+  <button x="c" y="m:-60" w="80" h="30" text="flow hor" on:click="open('flow_hor')"/>
+  <button x="c" y="m" w="80" h="30" text="flow ver" on:click="open('flow_ver')"/>
+  <button x="c" y="m:60" w="80" h="30" text="close" on:click="quit()"/>
+</window>

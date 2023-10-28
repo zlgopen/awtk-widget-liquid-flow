@@ -1,0 +1,25 @@
+<window theme="main" >
+  <view name="view" x="c" y="0" w="20%" h="100%" children_layout="default(r=1,c=2,s=10,m=10)">
+    <liquid_flow name="flow1" vertical="true" forward="true" running="true" style="ver" 
+      image="flow_ver" head_image="bottom" tail_image="top"/>
+    <liquid_flow name="flow2" vertical="true" forward="false" running="true" style="ver" 
+      image="flow_ver" head_image="top" tail_image="bottom"/>
+  </view>
+
+  <button x="10" y="b:150" w="80" h="30" text="start">
+    <property name="on:click">
+      widget_set('window', 'view.flow1.running', true);
+      widget_set('window', 'view.flow2.running', true);
+    </property>
+  </button>
+
+  <button x="10" y="b:100" w="80" h="30" text="stop">
+    <property name="on:click">
+      widget_set('window', 'view.flow1.running', false);
+      widget_set('window', 'view.flow2.running', false);
+    </property>
+  </button>
+
+  <button x="10" y="b:50" w="80" h="30" text="close" on:click="back()"/>
+
+</window>

@@ -1,0 +1,8 @@
+<liquid_flow>
+  <style name="hor" font_size="18">
+    <normal text_color="black" bg_image="pipe_hor" bg_image_draw_type="repeat_x"/>
+  </style>
+  <style name="ver" font_size="18">
+    <normal text_color="black" bg_image="pipe_ver" bg_image_draw_type="repeat_y"/>
+  </style>
+</liquid_flow>
